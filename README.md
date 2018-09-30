@@ -28,6 +28,4 @@ With PLA, use 20% infill, and 3 shells.  This will make a very strong part.
 
 Use a metal file to smooth burs, and remove sharp edges.  The instrument should not touch any sharp edge when placed in the mount, otherwise the instrument could be marked.
 
-<div id="solid-viewer" class="render-viewport" data-file="https://raw.githubusercontent.com/thrasher/guitar-mount/b65e14ffed0c66dcd15663177d7a17c7f7b72283/ukulele-clip.stl"><canvas width="1956" height="928" style="width: 978px; height: 464px;"></canvas></div>
-
 
