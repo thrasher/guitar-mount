@@ -41,9 +41,14 @@ def polygon():
 
 # render the stl
 def render():
-	#subprocess.check_output(['ls','-l']) #all that is technically needed...
-	print subprocess.check_output(['openscad','-Dpart=1','mount.scad','-o','ukulele-clip.stl'])
-	print subprocess.check_output(['openscad','-Dpart=2','mount.scad','-o','ukulele-wall.stl'])
+	# render each part in a thread, so it all goes faster
+	scad = []
+	scad.append(subprocess.Popen(['openscad','-Dpart=1','mount.scad','-o','ukulele-clip.stl']))
+	scad.append(subprocess.Popen(['openscad','-Dpart=2','mount.scad','-o','ukulele-wall.stl']))
+	# wait for all threads to finish, so we know we're done
+	for p in scad:
+		p.wait()
+	print("Rendering done!")
 
 def main():
 	polygon()
