@@ -42,8 +42,8 @@ def polygon():
 # render the stl
 def render():
 	#subprocess.check_output(['ls','-l']) #all that is technically needed...
-	print subprocess.check_output(['openscad','-Dmode=1','mount.scad','-o','ukulele-clip.stl'])
-	print subprocess.check_output(['openscad','-Dmode=2','mount.scad','-o','ukulele-wall.stl'])
+	print subprocess.check_output(['openscad','-Dpart=1','mount.scad','-o','ukulele-clip.stl'])
+	print subprocess.check_output(['openscad','-Dpart=2','mount.scad','-o','ukulele-wall.stl'])
 
 def main():
 	polygon()

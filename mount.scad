@@ -140,11 +140,13 @@ module screws() {
     }
 }
 
-part = 1;
+part = 0;
 if (part == 1) {
-     wall_mount();
+    echo("printing wall mount");
+    wall_mount();
 } else if (part == 2) {
-     music_stand();
+    echo("printing stand mount");
+    music_stand();
 } else {
-     echo("error: specify part 1 or 2");
+    echo("error: specify part 1 or 2");
 }
